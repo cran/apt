@@ -1,0 +1,131 @@
+% APT vignette 11/4/2010, Thursday
+
+% \VignetteIndexEntry{apt manual}
+% \VignetteDepends{car}
+% \VignettePackage{apt}
+
+\documentclass[final]{article}
+%\usepackage[in, plain]{fullpage}
+\usepackage[pdftex]{graphicx}
+\frenchspacing
+\usepackage{enumitem, amssymb, latexsym, amsmath}
+\usepackage{booktabs, varioref}
+\usepackage[round, colon]{natbib} 
+\usepackage[english]{babel}
+\usepackage{babelbib}
+\usepackage{Sweave}
+
+\begin{document}
+
+
+\title{Asymmetric Price Transmission with \\R Package \textbf{apt}}
+\date{\today}
+\author{Dr. Changyou Sun\\Mississippi State University\\}
+\maketitle
+
+\begin{abstract}
+The structure of the package \textbf{apt} and the implementation of models for asymmetric price transmission (APT) are explained in this note. This type of economic analysis is typically time series analysis with the steps of unit root test, cointegration test, and finally error correction model. APT studies have evolved with several distinct stages: pre-cointegration, linear cointegration, nonlinear threshold cointegration, and more recently, regime switching model. APT is usually about two price series so the programming focus of this package is on two series.
+\end{abstract}
+
+
+%__________________________________________________________________________
+\section{Introduction} 
+
+A number of econometric models have been employed to analyze APT in the past. There have been four major types of models. The first one is the classical specification developed in the 1970s. In a representative study of this type, Kinnucan and Forker (1987) analyze the farm-retail price transmission for four dairy products in the United States, using monthly data from January 1971 to December 1981. The second type of model considers the nonstationary property of data and incorporates cointegration concept into the analysis. As one of the seminal studies of this type, for instance, von Gramon-Taubadel (1998) uses cointegration and error correction representation to analyze the transmission between producer and wholesale pork prices in northern Germany.
+
+The third type of APT studies utilizes the regime switching model. It improves the specification further by adding a threshold autoregression mechanism to a standard error correction model. This assumes that the price relationship as a whole depends on a state variable, which can be one of the explanatory variables. Generally, the level of the state variable, relative to a threshold value, describes different states of the world, or regimes, hence the name of regime switching models. This type of model is especially helpful in considering transaction costs between spatial markets. The final type of APT studies exploits the error correction model with threshold cointegration. The rationale is that if the true long-term relationship between two prices is asymmetric, a test for cointegration based on a symmetric long-term equilibrium may result in misleading findings. A solution to this problem is proposed by Enders and Granger (1998), who introduce Threshold Autoregressive (TAR) and Momentum Threshold Autoregressive (MTAR) cointegration. Correspondingly, the error correction terms are revised based on threshold cointegration.
+
+APT studies use time series econometrics. It has typical steps from unit root test, cointegration test, and finally error correction models. The four types of APT models differ from each other at some steps but not all. To be efficient, it is easier to structure the package along the major steps, as detail in Table 1. Several functions have not been fully developed yet. I expect it will take some time to finish the whole plan.
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{Structure of package \textbf{bf}}
+    \begin{tabular}{llll}
+    \addlinespace
+    \toprule
+    Category & Function & Methods for class & Status \\
+    \midrule
+    Dataset & daCh  &       & Done \\
+          & daVi  &       & Done \\
+          & daVich &       & Done \\
+          & dcvAdf &       & No \\
+          & dcvEG &       & No \\
+          & dcvTar &       & No \\
+          &       &       &  \\
+    Basic manipulation & bsLag &       & Done \\
+          & bsStat &       & Done \\
+          & bsCaus &       & None \\
+          & bsKF  &       & None \\
+          &       &       &  \\
+    Unit root & urAdf &       & No \\
+          & urPP  &       & No \\
+          & urKpss &       & No \\
+          &       &       &  \\
+    Cointegration & ciLinEg &       & No \\
+          & ciLinJJ &       & No \\
+          & ciTarFit & print, summary & Done \\
+          & ciTarLag & plot  & Done \\
+          & ciTarThd & plot  & Done \\
+          &       &       &  \\
+    Error correction model & ecmAsyFit & print, summary & Done \\
+          & ecmAsyTest &       & Done \\
+          & ecmDiag &       & Done \\
+          & ecmSymFit & print, summary & Done \\
+          & ecmRswFit &       & No \\
+          & ecmRswThd &       & No \\
+    \bottomrule
+    \end{tabular}
+  \label{tab:addlabel}
+\end{table}
+
+
+%__________________________________________________________________________
+\section{Four types of APT models} 
+
+This section will explain the four types of APT models. The summary by \citealt{fre2007JES} and \citealt{mey2004JAE} is a great help for us to understand the landscape.
+
+%__________________________________________________________________________
+\section{Functions, classes, and methods}  
+
+The core functions are explained in this section.
+
+
+%__________________________________________________________________________
+\section{Example}
+
+We will follow the main steps for one dataset to demonstrate the process. Step 1 is to understand the data property.
+           
+<<>>=
+library(apt)
+data(daCh); data(daVi); data(daVich)
+bsStat(daVich)
+@
+
+Step 2 is to check the unit root of two series.
+
+<<>>=
+library(urca)
+adf.xa <- ur.df(daCh,  type=c("trend"), lags=3)
+adf.xa
+@
+
+\begin{center}
+<<fig=TRUE, echo=TRUE>>=
+plot(adf.xa)
+@
+\end{center}
+
+Step 3 is to examine the linear and nonlinear cointegration relationship. 
+
+
+Step 4 is to estimate an ECM model.
+
+
+
+
+\clearpage
+\bibliographystyle{plainnat}
+\bibliography{apten}
+
+\end{document}
