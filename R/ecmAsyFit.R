@@ -9,7 +9,7 @@ function(y, x, lag=1, split=TRUE,
 
     name.y <- deparse(substitute(y)); name.x <- deparse(substitute(x))
     A <- start(y); B <- end(y); Q <- tsp(y)[3]
-    z <- ts(residuals(lm(y~x)), start=A, end=B, freq=Q)  
+    z <- ts(residuals(lm(y~x)), start=A, end=B, frequency=Q)  
     lz <- lag(z, k=-1);  dz <- diff(z); ldz <- lag(dz, k=-1)
 
     if(model=="linear") { ind <- ifelse( lz  >= 0,      1, 0) } 
@@ -23,8 +23,8 @@ function(y, x, lag=1, split=TRUE,
     xp <- ifelse(xx>=0, xx, 0); xn <- ifelse(xx<0,  xx, 0)
     if (tsp(xx)[1] > tsp(pos)[1]) { aa <- start(xx) } else {aa <- start(pos)} 
     if (tsp(xx)[2] < tsp(pos)[2]) { bb <- end(xx)   } else {bb <- end(pos)  }   
-    da <- window(cbind(xx, pos, neg), start=aa, end=bb, freq=Q)
-    db <- window(cbind(xp,xn,pos,neg), start=aa, end=bb, freq=Q)
+    da <- window(cbind(xx, pos, neg), start=aa, end=bb, frequency=Q)
+    db <- window(cbind(xp,xn,pos,neg), start=aa, end=bb, frequency=Q)
     colnames(da) <- c(colnames(xx), "ECT.t_1.pos", "ECT.t_1.neg")
     colnames(db) <- c(paste(colnames(xx), ".pos", sep=""), 
         paste(colnames(xx), ".neg", sep=""), "ECT.t_1.pos", "ECT.t_1.neg")
