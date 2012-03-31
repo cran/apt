@@ -10,7 +10,7 @@ function(y, x, model=c("tar","mtar"), lag, thresh, small.win, ... )
     data.LR <- data.frame(cbind(y, x)); colnames(data.LR) <- c(name.y, name.x)
     formula.LR <- as.formula(paste(name.y, "~", name.x, sep=""))
     LR <- lm(formula.LR, data=data.LR) 
-    z <- ts(residuals(LR), start=A, end=B, freq=Q)  
+    z <- ts(residuals(LR), start=A, end=B, frequency=Q)  
     lz <- lag(z, k=-1);  dz <- diff(z); ldz <- lag(dz, k=-1)
     
     if(model=="tar")  { ind <- ifelse( lz  >= thresh, 1, 0) }
@@ -20,11 +20,11 @@ function(y, x, model=c("tar","mtar"), lag, thresh, small.win, ... )
 
     xx <- bsLag(h=dz, lag=lag, var.name="diff.resid")
     if(tsp(xx)[1] >= tsp(pos)[1]) {sa <- start(xx)} else {sa <- start(pos)}       
-    data.CI <- window(cbind(pos, neg, xx), start=sa, end=B, freq=Q)
+    data.CI <- window(cbind(pos, neg, xx), start=sa, end=B, frequency=Q)
     colnames(data.CI) <- c("pos.resid.t_1", "neg.resid.t_1", colnames(xx)) 
 
     if (!missing(small.win)){
-        data.CI <- window(data.CI, start=small.win, end=B, freq=Q)
+        data.CI <- window(data.CI, start=small.win, end=B, frequency=Q)
     }
     
     CI  <- lm(diff.resid.t_0 ~ 0 + ., data=data.CI)
