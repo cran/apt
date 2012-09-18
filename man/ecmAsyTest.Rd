@@ -36,13 +36,6 @@ Return a list object with the following components:
 \seealso{\code{\link{ecmAsyFit}} and \code{\link{ecmDiag}}.}
 
 \examples{
-
-data(daVi); data(daCh)
-t.mtar <- -0.451
-aem <- ecmAsyFit(y=daVi, x=daCh, lag=4, model="mtar", split=TRUE, thresh=t.mtar)
-aem
-summary(aem)
-ecmDiag(aem, 3)
-(tes <- ecmAsyTest(aem)$out)
+# see example at daVich
 }
 \keyword{regression}

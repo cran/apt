@@ -39,13 +39,6 @@ Enders, W., and C.W.J. Granger. 1998. Unit-root tests and asymmetric adjustment 
 \author{Changyou Sun (\email{csun@cfr.msstate.edu})}
 \seealso{\code{\link{print.ecm}}; \code{\link{summary.ecm}}; \code{\link{ecmDiag}}; and \code{\link{ecmAsyTest}}.}
 \examples{
-data(daVi); data(daCh)
-t.mtar <- -0.451
-aem <- ecmAsyFit(y=daVi, x=daCh, lag=4, model="mtar", 
-    split=TRUE, thresh=t.mtar)
-aem
-summary(aem)
-ecmDiag(aem, 3)
-(tes <- ecmAsyTest(aem)$out)
+# see example at daVich
 }
-\keyword{regression}
+\keyword{regression} 

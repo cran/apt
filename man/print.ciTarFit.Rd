@@ -16,8 +16,6 @@ Four main outputs from threshold cointegration regression are shown: long-run re
 \author{Changyou Sun (\email{csun@cfr.msstate.edu})}
 \seealso{\code{\link{ciTarFit}}.}
 \examples{
-data(daVi); data(daCh)    
-f1 <- ciTarFit(y=daVi, x=daCh, model="tar", lag=3, thresh=0)
-f1
+# see example at daVich
 }
 \keyword{methods}

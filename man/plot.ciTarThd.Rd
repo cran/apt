@@ -19,9 +19,6 @@ Enders, W., and C.W.J. Granger. 1998. Unit-root tests and asymmetric adjustment 
 \author{Changyou Sun (\email{csun@cfr.msstate.edu})}
 \seealso{\code{\link{ciTarThd}} and \code{\link{ciTarFit}}.}
 \examples{
-data(daVi); data(daCh)
-t4 <- ciTarThd(y=daVi, x=daCh, model="mtar", lag=0) 
-(th.mtar <- t4$basic)
-plot(t4)
+# see example at daVich
 }
 \keyword{methods}

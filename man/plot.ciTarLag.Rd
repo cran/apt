@@ -18,11 +18,6 @@ Enders, W., and C.W.J. Granger. 1998. Unit-root tests and asymmetric adjustment 
 \seealso{\code{\link{ciTarLag}}; \code{\link{ciTarThd}}; and \code{\link{ciTarFit}}.}
 
 \examples{
-data(daVi); data(daCh)
-t.tar <- -8.041; t.mtar <- -0.451
-mx <- 4
-(g4 <-ciTarLag(y=daVi, x=daCh, model="mtar",maxlag=mx, 
-    adjust=TRUE, thresh=t.mtar))
-plot(g4)
+# see example at daVich
 }
 \keyword{methods}

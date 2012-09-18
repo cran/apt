@@ -44,43 +44,6 @@ Enders, W., and C.W.J. Granger. 1998. Unit-root tests and asymmetric adjustment 
 \code{\link{plot.ciTarThd}} for the graphical trend; \code{\link{ciTarFit}}; and \code{\link{ciTarLag}} 
 }
 \examples{
-data(daVi); data(daCh)
-
-# 1. best threshold value for tar
-t3 <- ciTarThd(y=daVi, x=daCh, model="tar", lag=0); 
-(th.tar <- t3$basic)
-plot(t3)
-
-# 2. best threshold value for mtar 
-t4 <- ciTarThd(y=daVi, x=daCh, model="mtar", lag=0) 
-(th.mtar <- t4$basic)
-plot(t4)
-
-# 3. best threshold by lag; 
-# The following two loops are executable.
-# But it may take about 5 to 10 minutes to run 
-# because there are over 1,000 linear regressions in the loops.
-
-\dontrun{
-for (i in 1:12) {
-     t3a <- ciTarThd(y=daVi, x=daCh, model="tar", lag=i) 
-     th.tar[i+2] <- t3a$basic[,2]
- }
-th.tar
-
-for (i in 1:12) {
-     t4a <- ciTarThd(y=daVi, x=daCh, model="mtar", lag=i) 
-     th.mtar[i+2] <- t4a$basic[,2]
- }
-th.mtar
-}
-
-# 4. The final result of threshold selection are as follows.
-# The best threshold values do not vary much by lag. 
-# This is not suprising because more lagged values do not 
-# reduce SSE much.
-
-t.tar <- -8.041; t.mtar <- -0.451    # lag = 0 to 4
-t.tar <- -8.701; t.mtar <- -0.451    # lag = 5 to 12
+# see example at daVich
 }
 \keyword{regression}

@@ -26,13 +26,6 @@ Return a data frame object with the following components by equation: R-squared,
 \seealso{\code{\link{ecmAsyFit}}; \code{\link{ecmSymFit}}; and \code{\link{ecmDiag}}.}
 
 \examples{
-data(daVi); data(daCh)
-t.mtar <- -0.451
-aem <- ecmAsyFit(y=daVi, x=daCh, lag=4, model="mtar", 
-    split=TRUE, thresh=t.mtar)
-ecmDiag(aem, 3)
-
-sem <- ecmSymFit(y=daVi, x=daCh, lag=4)
-ecmDiag(sem) 
+# see example at daVich
 }
 \keyword{regression}

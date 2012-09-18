@@ -154,7 +154,9 @@ We will follow the main steps for one dataset to demonstrate the process. Step 1
            
 <<>>=
 library(apt)
-data(daCh); data(daVi); data(daVich)
+data(daVich)
+daVi <- y <- daVich[, 1] 
+daCh <- x <- daVich[, 2]
 bsStat(daVich)
 @
 

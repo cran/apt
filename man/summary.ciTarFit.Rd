@@ -16,12 +16,6 @@ This wraps up the outputs from threshold cointegration regression in two data fr
 \author{Changyou Sun (\email{csun@cfr.msstate.edu})}
 \seealso{\code{\link{ciTarFit}}.}
 \examples{
-data(daVi); data(daCh)
-(f4 <- ciTarFit(y=daVi, x=daCh, model="mtar",lag=3, thresh=-0.451))
-f4.sum <- summary(f4)
-names(f4.sum)
-f4.sum$dia
-f4.sum$out
-f4.sum 
+# see example at daVich
 } 
 \keyword{methods}

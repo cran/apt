@@ -54,37 +54,6 @@ Enders, W., and P.L. Siklos. 2001. Cointegration and threshold adjustment. Journ
 \code{\link{print.ciTarFit}}; \code{\link{summary.ciTarFit}}; \code{\link{ciTarLag}} for lag selection; and \code{\link{ciTarThd}} for threshold selection; 
 }
 \examples{
-data(daVi); data(daCh)
-t.tar <- -8.041; t.mtar <- -0.451
-mya <- myb <- 3       
-
-(f1 <- ciTarFit(y=daVi, x=daCh, model="tar", lag=mya, thresh=0))
-(f2 <- ciTarFit(y=daVi, x=daCh, model="tar", lag=mya, thresh=t.tar))
-(f3 <- ciTarFit(y=daVi, x=daCh, model="mtar",lag=myb, thresh=0))
-(f4 <- ciTarFit(y=daVi, x=daCh, model="mtar",lag=myb, thresh=t.mtar))
- 
-r0 <- cbind(summary(f1)$dia, summary(f2)$dia, summary(f3)$dia, 
-    summary(f4)$dia)
-(r1 <- r0[, c(1,2,4,6,8)])
-col.name <- c("item","tar","c.tar","mtar","c.mtar")
-diag <- r1[c(1:4, 6:7, 12:14, 8, 9, 11), col.name]
-rownames(diag) <- 1:nrow(diag); diag
-
-e1 <- summary(f1)$out; e2 <- summary(f2)$out 
-e3 <- summary(f3)$out; e4 <- summary(f4)$out
-(r2 <- rbind(e1, e2, e3, e4))
-
-ee <- list(e1, e2, e3, e4); vect <- NULL
-for (i in 1:4) {
-  ef <- data.frame(ee[i]); ef
-  vect2 <- c(paste(ef[3, "estimate"], ef[3, "sign"], sep=""), 
-         paste("(", ef[3, "t.value"], ")", sep=""),
-         paste(ef[4, "estimate"], ef[4, "sign"], sep=""), 
-         paste("(", ef[4, "t.value"], ")", sep=""))    
-  vect <- cbind(vect, vect2)
-}
-item <- c("pos.coeff","pos.t.value", "neg.coeff","neg.t.value")
-ve <- data.frame(cbind(item, vect)); colnames(ve) <- col.name
-( tab3.b <- rbind(diag, ve)[c(1:2, 13:16, 3:12), ])
+# see example at daVich
 }
 \keyword{regression}
