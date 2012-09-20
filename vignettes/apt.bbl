@@ -1,0 +1,20 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Frey and Manera(2007)]{fre2007JES}
+G.~Frey and M.~Manera.
+\newblock Econometric models of asymmetric price transmission.
+\newblock \emph{Journal of Economic Surveys}, 21\penalty0 (2):\penalty0
+  349--415, 2007.
+
+\bibitem[Meyer and von Cramon-Taubadel(2004)]{mey2004JAE}
+J.~Meyer and S.~von Cramon-Taubadel.
+\newblock Asymmetric price transmission: a survey.
+\newblock \emph{Journal of Agricultural Economics}, 55\penalty0 (3):\penalty0
+  581--611, 2004.
+
+\end{thebibliography}

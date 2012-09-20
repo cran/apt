@@ -16,10 +16,6 @@ Summary results of the two ECM equations are shown for the two focal price serie
 \author{Changyou Sun (\email{csun@cfr.msstate.edu})}
 \seealso{\code{\link{ecmSymFit}} and \code{\link{ecmAsyFit}}.}
 \examples{
-data(daVi); data(daCh)
-sem <- ecmSymFit(y=daVi, x=daCh, lag=4); sem
-aem <- ecmAsyFit(y=daVi, x=daCh, lag=4, model="mtar", 
-    split=TRUE, thresh=-0.451)
-aem 
+# see example at daVich
 }
 \keyword{methods}

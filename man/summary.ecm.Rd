@@ -13,11 +13,6 @@
 \author{Changyou Sun (\email{csun@cfr.msstate.edu})}
 \seealso{\code{\link{ecmSymFit}} and \code{\link{ecmAsyFit}}.}
 \examples{
-data(daVi); data(daCh)
-sem <- ecmSymFit(y=daVi, x=daCh, lag=4)
-aem <- ecmAsyFit(y=daVi, x=daCh, lag=4, model="mtar", 
-    split=TRUE, thresh=-0.451)
-summary(sem)
-summary(aem) 
+# see example at daVich
 }
 \keyword{methods}

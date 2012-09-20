@@ -34,10 +34,6 @@ Enders, W. 2004. Applied Econometric Time Series. John Wiley & Sons, Inc., New Y
 \code{\link{print.ecm}}; \code{\link{summary.ecm}}; \code{\link{ecmDiag}}; and \code{\link{ecmAsyFit}}.
 }
 \examples{
-data(daVi); data(daCh)
-sem <- ecmSymFit(y=daVi, x=daCh, lag=4)
-sem; names(sem)
-summary(sem)
-ecmDiag(sem)
+# see example at daVich
 }
 \keyword{regression}

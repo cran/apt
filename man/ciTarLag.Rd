@@ -38,17 +38,6 @@ Enders, W., and C.W.J. Granger. 1998. Unit-root tests and asymmetric adjustment 
 \code{\link{plot.ciTarLag}} for the graphical trend; \code{\link{ciTarFit}}; and \code{\link{ciTarThd}}; 
 }
 \examples{
-data(daVi); data(daCh)
-t.tar <- -8.041; t.mtar <- -0.451
-mx <- 4
-(g1 <-ciTarLag(y=daVi, x=daCh, model="tar", maxlag=mx, thresh= 0))
-(g2 <-ciTarLag(y=daVi, x=daCh, model="mtar",maxlag=mx, thresh= 0))
-(g3 <-ciTarLag(y=daVi, x=daCh, model="tar", maxlag=mx, thresh=t.tar))
-(g4 <-ciTarLag(y=daVi, x=daCh, model="mtar",maxlag=mx, thresh=t.mtar))
-plot(g4)
-
-(g5 <-ciTarLag(y=daVi, x=daCh, model="mtar",maxlag=mx, 
-    adjust=FALSE, thresh=t.mtar))
-plot(g5)
+# see example at daVich
 }
 \keyword{regression}
