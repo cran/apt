@@ -1,6 +1,6 @@
 ecmAsyTest <- function(w, digits = 3, ...) 
 {
-  if (!(class(w)[2] == "ecmAsyFit")) {stop("\n Need an object of class 'ecmAsyFit'.\n")}
+  if (!inherits(w, "ecmAsyFit")) {stop("\n Need an 'ecmAsyFit' object.\n")}
   L <- w$lag; dd <- digits  
   brief <- Hypo <- F.sta.x <- P.val.x <- F.sta.y <- P.val.y <- NULL
 

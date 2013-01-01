@@ -1,7 +1,7 @@
 ecmDiag <- function (m, digits = 2, ...)
 {
-  if (!(class(m)[1] == "ecm")) {
-    stop("\n Provide an object of class 'ecm' from ecmSymFit or ecmAsyFit.\n")}
+  if (!inherits(m, "ecm")) {
+    stop("\n Provide an 'ecm' objectt from ecmSymFit or ecmAsyFit.\n")}
 
   dia.name <- c("R-squared", "Adj-R2", "F-stat", "Stat DW", "p-value DW", 
       "AIC", "BIC", "LB(4)", "LB(8)", "LB(12)") 
