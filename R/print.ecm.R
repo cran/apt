@@ -1,9 +1,9 @@
 print.ecm <- function(x, ...)
 {
-  if (class(x)[2] == "ecmSymFit") {
+  if (inherits(x, "ecmSymFit")) {
       ti="ECM - Symmetric + linear cointegration - "
   } else {
-      if (class(x)[2] == "ecmAsyFit" & x$model == "linear") {
+      if (inherits(x, "ecmAsyFit") & x$model == "linear") {
           ti="ECM - Asymmetric + linear cointegration - "
       } else {ti="ECM - Asymmetric + nonlinear threshold cointegration - "}
   }
