@@ -33,6 +33,7 @@ Return a list object with the following components:
 }
 \references{Frey, G., and M. Manera. 2007. Econometric models of asymmetric price transmission. Journal of Economic Surveys 21(2):349-415.}
 \author{Changyou Sun (\email{csun@cfr.msstate.edu})}
+
 \seealso{\code{\link{ecmAsyFit}} and \code{\link{ecmDiag}}.}
 
 \examples{

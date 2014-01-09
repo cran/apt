@@ -39,3 +39,11 @@ ciTarFit <- function(y, x, model = c("tar","mtar"), lag, thresh, small.win, ...)
   class(result) <- "ciTarFit"
   return(result)
 } 
+
+print.ciTarFit <- function(x, ...)
+{
+  cat("=== Long Run Regression\n") ; print(summary(x$LR))
+  cat("=== Threshold Cointegration Regression\n"); print(summary(x$CI))
+  cat("=== H1: No cointegration b/w two variables\n"); print(x$f.phi)
+  cat("=== H2: Symmetric adjustment in the long run\n"); print(x$f.apt)    
+} 

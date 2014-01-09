@@ -14,7 +14,9 @@ Show main outputs from symmetric \code{ecmSymFit} or asymmetric \code{ecmAsyFit}
 Summary results of the two ECM equations are shown for the two focal price series.
 }
 \author{Changyou Sun (\email{csun@cfr.msstate.edu})}
+
 \seealso{\code{\link{ecmSymFit}} and \code{\link{ecmAsyFit}}.}
+
 \examples{
 # see example at daVich
 }

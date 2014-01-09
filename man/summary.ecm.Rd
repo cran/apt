@@ -11,6 +11,7 @@
 \details{This wraps up the coefficents and statistics from ECM by equation.}
 \value{A data frame object with coefficients and related statistics by equation.}
 \author{Changyou Sun (\email{csun@cfr.msstate.edu})}
+
 \seealso{\code{\link{ecmSymFit}} and \code{\link{ecmAsyFit}}.}
 \examples{
 # see example at daVich
