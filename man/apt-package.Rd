@@ -12,9 +12,9 @@ This package focuses on the price transmission between \emph{two} price variable
 \tabular{ll}{
 Package: \tab apt\cr
 Type: \tab Package\cr
-Version: \tab 1.3\cr
-Date: \tab 2010-11-03 (first built); 2013-1-1 (last) \cr
-Depends: \tab R (>= 2.10.0), car, erer, urca\cr
+Version: \tab 2.0\cr
+Date: \tab 2010-11-03 (first built); 2014-1-9 (last) \cr
+Depends: \tab R (>= 3.0.0), car, erer, urca\cr
 License: \tab GPL \cr
 LazyLoad: \tab yes\cr
 }

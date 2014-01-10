@@ -1,5 +1,6 @@
 \name{ciTarThd}
 \alias{ciTarThd}
+\alias{plot.ciTarThd}
 \title{
 Threshold Selection for Threshold Cointegration Regression
 }
@@ -34,6 +35,14 @@ Return a list object of class "ciTarThd" with the following components:
   \item{basic}{a brief summary of the major outputs}
   \item{path}{a data frame of the search record (number of regression, threshold value, SSE, AIC, and BIC values).}
 }
+
+\section{Methods}{
+  One method is defined as follows:
+  \describe{
+    \item{\code{plot}:}{ plotting three graphs in one window; they reveals the relationship between SSE (sum of squared errors), AIC, BIC and the threshold values. The best threshold value is associated with the lowest SSE value.}
+  }
+} 
+
 \references{
 Chan, K.S. 1993. Consistency and limiting distribution of the least squares estimator of a threshold autoregressive model. The Annals of Statistics 21(1):520-533.
 
@@ -41,7 +50,7 @@ Enders, W., and C.W.J. Granger. 1998. Unit-root tests and asymmetric adjustment 
 }
 \author{Changyou Sun (\email{csun@cfr.msstate.edu})}
 \seealso{
-\code{\link{plot.ciTarThd}} for the graphical trend; \code{\link{ciTarFit}}; and \code{\link{ciTarLag}} 
+\code{\link{ciTarFit}}; and \code{\link{ciTarLag}} 
 }
 \examples{
 # see example at daVich

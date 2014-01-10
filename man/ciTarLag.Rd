@@ -1,5 +1,6 @@
 \name{ciTarLag}
 \alias{ciTarLag}
+\alias{plot.ciTarLag}
 \title{
 Lag Selection for Threshold Cointegration Regression
 }
@@ -28,6 +29,14 @@ Return a list object of class "ciTarLag" with the following components:
    
   \item{out}{a data frame of the final model selection, including the values of model, maximum lag, threshold value, best lag by AIC, best lag by BIC} 
 }
+
+\section{Methods}{
+  One method is defined as follows:
+  \describe{
+    \item{\code{plot}:}{ This demonstrates the trend of AIC and BIC changes of threshold cointegration regressions by lag. It facilitates the selection of the best lag for a threshold cointegration model.}
+  }
+} 
+
 \references{
 Enders, W. 2004. Applied Econometric Time Series. John Wiley & Sons, Inc., New York. 480 P.
 
@@ -35,7 +44,7 @@ Enders, W., and C.W.J. Granger. 1998. Unit-root tests and asymmetric adjustment 
 }
 \author{Changyou Sun (\email{csun@cfr.msstate.edu})}
 \seealso{
-\code{\link{plot.ciTarLag}} for the graphical trend; \code{\link{ciTarFit}}; and \code{\link{ciTarThd}}; 
+\code{\link{ciTarFit}}; and \code{\link{ciTarThd}}; 
 }
 \examples{
 # see example at daVich

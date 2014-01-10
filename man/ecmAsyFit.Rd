@@ -33,10 +33,20 @@ Return a list object of class "ecm" and "ecmAsyFit" with the following component
   \item{data}{all the data combined for the ECM}
   \item{thresh}{thresh value for TAR and MTAR model}       
 }
+
+\section{Methods}{
+  Two methods are defined as follows:
+  \describe{
+    \item{\code{print}:}{ showing the key outputs.}
+    \item{\code{summary}:}{ summarizing thekey outputs.}
+  }
+}
+
 \references{
 Enders, W., and C.W.J. Granger. 1998. Unit-root tests and asymmetric adjustment with an example using the term structure of interest rates. Journal of Business & Economic Statistics 16(3):304-311.
 }
 \author{Changyou Sun (\email{csun@cfr.msstate.edu})}
+
 \seealso{\code{\link{print.ecm}}; \code{\link{summary.ecm}}; \code{\link{ecmDiag}}; and \code{\link{ecmAsyTest}}.}
 \examples{
 # see example at daVich

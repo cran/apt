@@ -1,15 +1,19 @@
 \name{daVich}
 \alias{daVich}
 \docType{data}
-\title{Import price of wooden beds from Vietnam anc China}
-\description{This data set contains two unit import prices of wooden beds from Vietnam and China to the United States.
+\title{Import prices and values of wooden beds from Vietnam anc China}
+\description{This data set contains two unit import prices (dollar per piece) and values (million dollars) of wooden beds from Vietnam and China to the United States.
   \tabular{ll}{
-  \code{vietnam } \tab Monthly price over Janurary 2002 to Janurary 2010 from Vietnam. \cr
-  \code{china } \tab Monthly price over Janurary 2002 to Janurary 2010 from China. \cr
+  \code{price.vi } \tab Monthly price over Janurary 2002 to Janurary 2010 from Vietnam. \cr
+  \code{price.ch } \tab Monthly price over Janurary 2002 to Janurary 2010 from China. \cr
+  \code{price.vi } \tab Monthly value over Janurary 2002 to Janurary 2010 from Vietnam. \cr
+  \code{price.ch } \tab Monthly value over Janurary 2002 to Janurary 2010 from China. \cr
   }
 }
 \usage{data(daVich)}
-\format{A monthly time series from Janurary 2002 to Janurary 2010 with 97 observations for each of the two series.}
+
+\format{A monthly time series from Janurary 2002 to Janurary 2010 with 97 observations for each of the four series.}
+
 \details{
 Under the Harmonized Tariff Schedule (HTS) system, the commodity of wooden beds is classified as HTS 9403.50.9040. The monthly cost-insurance-freight values in dollar and quantities in piece are reported by country from U.S. ITC (2010). The unit price (dollar per piece) is calculated as the ratio of value over quantity by country.
 }
@@ -28,15 +32,15 @@ Sun, C. 2011. Price dynamics in the import wooden bed market of the United State
 
 data(daVich)
 head(daVich); tail(daVich); str(daVich)
-daVi <- y <- daVich[, 1] 
-daCh <- x <- daVich[, 2]
+prVi <- y <- daVich[, 1] 
+prCh <- x <- daVich[, 2]
 
 
 # 2. EG cointegration  _________________________________________________________
 
 LR <- lm(y ~ x); summary(LR)
 (LR.coef <- round(summary(LR)$coefficients, 3))
-(ry <-  ts(residuals(LR), start=start(daCh), end=end(daCh), frequency =12))
+(ry <-  ts(residuals(LR), start=start(prCh), end=end(prCh), frequency =12))
 summary(eg <- ur.df(ry,  type=c("none"), lags=1)); plot(eg)
 (eg4  <- Box.test(eg@res, lag = 4, type="Ljung") )
 (eg8  <- Box.test(eg@res, lag = 8, type="Ljung") )
@@ -48,18 +52,18 @@ summary(eg <- ur.df(ry,  type=c("none"), lags=1)); plot(eg)
 # 3. TAR + Cointegration  ______________________________________________________
 
 # best threshold 
-t3 <- ciTarThd(y=daVi, x=daCh, model="tar", lag=0) 
+t3 <- ciTarThd(y=prVi, x=prCh, model="tar", lag=0) 
 (th.tar <- t3$basic); plot(t3)
 for (i in 1:12) {                 # 20 seconds
-  t3a <- ciTarThd(y=daVi, x=daCh, model="tar", lag=i) 
+  t3a <- ciTarThd(y=prVi, x=prCh, model="tar", lag=i) 
   th.tar[i+2] <- t3a$basic[,2]
 }
 th.tar
  
-t4 <- ciTarThd(y=daVi, x=daCh, model="mtar", lag=0); (th.mtar <- t4$basic)
+t4 <- ciTarThd(y=prVi, x=prCh, model="mtar", lag=0); (th.mtar <- t4$basic)
 plot(t4)
 for (i in 1:12) {
-  t4a <- ciTarThd(y=daVi, x=daCh, model="mtar", lag=i) 
+  t4a <- ciTarThd(y=prVi, x=prCh, model="mtar", lag=i) 
   th.mtar[i+2] <- t4a$basic[,2]
  }
 th.mtar
@@ -69,10 +73,10 @@ th.mtar
 
 # lag selection
 mx <- 12
-(g1 <-ciTarLag(y=daVi, x=daCh, model="tar", maxlag=mx, thresh= 0));     plot(g1)
-(g2 <-ciTarLag(y=daVi, x=daCh, model="mtar",maxlag=mx, thresh= 0));     plot(g2)
-(g3 <-ciTarLag(y=daVi, x=daCh, model="tar", maxlag=mx, thresh=t.tar));  plot(g3)
-(g4 <-ciTarLag(y=daVi, x=daCh, model="mtar",maxlag=mx, thresh=t.mtar)); plot(g4)
+(g1 <-ciTarLag(y=prVi, x=prCh, model="tar", maxlag=mx, thresh= 0));     plot(g1)
+(g2 <-ciTarLag(y=prVi, x=prCh, model="mtar",maxlag=mx, thresh= 0));     plot(g2)
+(g3 <-ciTarLag(y=prVi, x=prCh, model="tar", maxlag=mx, thresh=t.tar));  plot(g3)
+(g4 <-ciTarLag(y=prVi, x=prCh, model="mtar",maxlag=mx, thresh=t.mtar)); plot(g4)
 
 
 # Table 3 Results of EG and threshold cointegration tests
@@ -83,10 +87,10 @@ mx <- 12
 #  it should be -0.106 (-0.764), as cacluated from below codes. 
 #  The main conclusion about the research issue is still qualitatively the same.
 vv <- 3
-(f1 <- ciTarFit(y=daVi, x=daCh, model="tar",  lag=vv, thresh=0     ))
-(f2 <- ciTarFit(y=daVi, x=daCh, model="tar",  lag=vv, thresh=t.tar ))
-(f3 <- ciTarFit(y=daVi, x=daCh, model="mtar", lag=vv, thresh=0     ))
-(f4 <- ciTarFit(y=daVi, x=daCh, model="mtar", lag=vv, thresh=t.mtar))
+(f1 <- ciTarFit(y=prVi, x=prCh, model="tar",  lag=vv, thresh=0     ))
+(f2 <- ciTarFit(y=prVi, x=prCh, model="tar",  lag=vv, thresh=t.tar ))
+(f3 <- ciTarFit(y=prVi, x=prCh, model="mtar", lag=vv, thresh=0     ))
+(f4 <- ciTarFit(y=prVi, x=prCh, model="mtar", lag=vv, thresh=t.mtar))
  
 r0 <- cbind(summary(f1)$dia, summary(f2)$dia, summary(f3)$dia, 
   summary(f4)$dia)
@@ -112,8 +116,8 @@ rownames(res.CI) <- 1:nrow(res.CI)
                         
 # 4. APT + ECM   _______________________________________________________________
 
-(sem <- ecmSymFit(y=daVi, x=daCh, lag=4)); names(sem)
-aem <- ecmAsyFit(y=daVi, x=daCh,lag=4, model="mtar", split=TRUE, thresh=t.mtar)
+(sem <- ecmSymFit(y=prVi, x=prCh, lag=4)); names(sem)
+aem <- ecmAsyFit(y=prVi, x=prCh,lag=4, model="mtar", split=TRUE, thresh=t.mtar)
 aem
 (ccc <- summary(aem))
 coe <- cbind(as.character(ccc[1:19, 2]), 
@@ -139,6 +143,6 @@ colnames(tes3) <- colnames(coe)
 table.4 <- data.frame(rbind(coe, ed2, tes3))
 options(width=150); table.4; options(width=80)
 
-}
+} 
 }
 \keyword{datasets}
