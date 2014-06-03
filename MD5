@@ -1,5 +1,5 @@
-a2d7cd6efeb50f682269c77fadf0fed5 *DESCRIPTION
-2e24018b49f681a533b62f62d92e8654 *NAMESPACE
+aa6f5161d2f5e8a1bdf1831349dea596 *DESCRIPTION
+d9332d6f446e5355997e4d90a53ded8e *NAMESPACE
 39536dde48c1b5ae0851db9b0b3a9518 *R/ciTarFit.R
 78ef2b7a6b6f86d2cafe502311d6daa8 *R/ciTarLag.R
 5d75960203e5324de043663a8ce5f274 *R/ciTarThd.R
@@ -10,12 +10,13 @@ fa34067498b0e8558ead5c860e5a4d1c *R/ecmSymFit.R
 4e82340341463d30f83ed5f4865fd7aa *R/print.ecm.R
 c6ab38d58b1d9c8bbe2820151230d722 *R/summary.ciTarFit.R
 36f2603947340547bce104ff927604aa *R/summary.ecm.R
+320bf2b77762c95ad14fe56e5d8df504 *build/vignette.rds
 64afaf44d6d2d34051daaa45fb8277cf *data/daVich.rda
-1ef05e8120e8d7c482209e23675448d8 *inst/doc/apt-manual.pdf
+dc2a46a526839b76bd049935dfe43983 *inst/doc/apt-manual.pdf
 643efb90bb5a0e4db63f1512fadd8fb0 *inst/doc/apt.R
 fa859b0b5ee8295ab02ac6c4f7d03459 *inst/doc/apt.Rnw
 102adfa9dc0c883f9a88b9f529a30133 *inst/doc/apt.pdf
-fad14c4e40f01e5f02a3ff4cfc3e2118 *man/apt-package.Rd
+7b851ee259a446e38e896c7984a0731c *man/apt-package.Rd
 216199a041b08f8220337675f6682b5d *man/ciTarFit.Rd
 12ad32dd9ecafa333efd34fb7dcace27 *man/ciTarLag.Rd
 04895d66a778e2ed0011bf4807c48ea4 *man/ciTarThd.Rd
