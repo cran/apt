@@ -3,8 +3,8 @@
 \title{Fitting Asymmetric Error Correction Model}
 \description{Estimate an asymmetric error correction model (ECM) for two time series.}
 \usage{
-ecmAsyFit(y, x, lag = 1, split = TRUE, 
-    model = c("linear", "tar", "mtar"), thresh, ...)
+  ecmAsyFit(y, x, lag = 1, split = TRUE, 
+    model = c("linear", "tar", "mtar"), thresh = 0)
 }
 \arguments{
   \item{y}{dependent or left-side variable for the long-run regression.}
@@ -13,7 +13,6 @@ ecmAsyFit(y, x, lag = 1, split = TRUE,
   \item{split}{a logical value (default of TRUE) of whether the right-hand variables should be split into positive and negative parts.}
   \item{model}{a choice of three models: linear, tar , or mtar cointegration.}
   \item{thresh}{a threshold value; this is only required when the model is specified as 'tar' or 'mtar.'}
-  \item{\dots}{additional arguments to be passed.}
 }
 \details{
 There are two specficiations of an asymmetric ECM. The first one is how to calculate the error correction terms. One way is through linear two-step Engle Granger approach, as specificied by \code{model="linear"}. The other two ways are threshold cointegration by either 'tar' or 'mtar' with a threshold value. The second specification is related to the possible asymmetric price transmission in the lagged price variables, as specified in \code{split = TRUE}. Note that the linear cointegration specification is a special case of the threshold cointegration. A model with \code{model="linear"} is the same as a model with \code{model="tar", thresh = 0}.   

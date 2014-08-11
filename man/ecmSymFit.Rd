@@ -3,13 +3,12 @@
 \title{Fitting symmetric Error Correction Model}
 \description{Estimate a symmetric error correction model (ECM) for two time series.}
 \usage{
-ecmSymFit(y, x, lag = 1, ...)
+ecmSymFit(y, x, lag = 1)
 }
 \arguments{
   \item{y}{dependent or left-side variable for the long-run regression.}
   \item{x}{independent or right-side variable for the long-run regression.}
   \item{lag}{number of lags for variables on the right side.}
-  \item{\dots}{additional arguments to be passed.}
 }
 \details{
 The package \code{apt} focuses on price transmission between two series. This function estimates a standard error correction model for two time series. While it can be extended for more than two series, it is beyond the objective of the package now. 

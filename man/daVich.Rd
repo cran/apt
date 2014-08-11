@@ -1,7 +1,7 @@
 \name{daVich}
 \alias{daVich}
 \docType{data}
-\title{Import prices and values of wooden beds from Vietnam anc China}
+\title{Import prices and values of wooden beds from Vietnam and China}
 \description{This data set contains two unit import prices (dollar per piece) and values (million dollars) of wooden beds from Vietnam and China to the United States.
   \tabular{ll}{
   \code{price.vi } \tab Monthly price over Janurary 2002 to Janurary 2010 from Vietnam. \cr
@@ -30,7 +30,7 @@ Sun, C. 2011. Price dynamics in the import wooden bed market of the United State
 
 # 1. Data preparation __________________________________________________________
 
-data(daVich)
+library(urca); data(daVich)
 head(daVich); tail(daVich); str(daVich)
 prVi <- y <- daVich[, 1] 
 prCh <- x <- daVich[, 2]

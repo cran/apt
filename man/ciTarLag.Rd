@@ -2,14 +2,14 @@
 \alias{ciTarLag}
 \alias{plot.ciTarLag}
 \title{
-Lag Selection for Threshold Cointegration Regression
+  Lag Selection for Threshold Cointegration Regression
 }
 \description{
-Select the best lag for threshold cointegration regression by AIC and BIC
+  Select the best lag for threshold cointegration regression by AIC and BIC
 }
 \usage{
-ciTarLag(y, x, model = c("tar", "mtar"), maxlag, thresh, 
-    adjust = TRUE, ...)
+  ciTarLag(y, x, model = c("tar", "mtar"), maxlag = 4, 
+  thresh = 0, adjust = TRUE) 
 }
 \arguments{
   \item{y}{dependent or left-side variable for the long-run regression.}
@@ -17,9 +17,9 @@ ciTarLag(y, x, model = c("tar", "mtar"), maxlag, thresh,
   \item{model}{a choice of two models, either tar or mtar.}
   \item{maxlag}{maximum number of lags allowed in the search process.}
   \item{thresh}{a threshold value.}
-  \item{adjust}{logical value (default of TRUE) of whether to adjust the window widths so all regressions by lag have the same number of observations}  
-  \item{\dots}{additional arguments to be passed.}
+  \item{adjust}{logical value (default of TRUE) of whether to adjust the window widths so all regressions by lag have the same number of observations}
 }
+
 \details{
 Estimate the threshold cointegration regressions by lag and then select the best regression by AIC or BIC value. The longer the lag, the smaller the number of observations availabe for estimation. If the windows of regressions by lag are not ajusted, the maximum lag is usually the best lag by AIC or BIC. Theorectially, AIC and BIC from different models should be compared on the basis of the same observation numbers (Ender 2004). \code{adjust} shows the effect of this adjustment on the estimation window. By default, the value of \code{adjust} should be TRUE. 
 }

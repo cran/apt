@@ -7,12 +7,11 @@ Diagnostic Statitics for Symmetric or Asymmetric ECMs
 Report a set of diagnostic statistics for symmetric or asymmetric error correction models
 }
 \usage{
-ecmDiag(m, digits = 2, ...)
+ecmDiag(m, digits = 2)
 }
 \arguments{
   \item{m}{an object of class \code{ecm} from the function of \code{ecmAsyFit} or \code{ecmSymFit}.}
   \item{digits}{number of digits used in rounding outputs.}
-  \item{\dots}{additional arguments to be passed.}
 }
 
 \details{

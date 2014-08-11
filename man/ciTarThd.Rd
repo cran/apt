@@ -8,8 +8,8 @@ Threshold Selection for Threshold Cointegration Regression
 Select the best threshold for threshold cointegration regression by sum of squared errors
 }
 \usage{
-ciTarThd(y, x, model = c("tar", "mtar"), lag, th.range = 0.15, 
-    digits = 3, ...)
+  ciTarThd(y, x, model = c('tar', 'mtar'), lag = 1, 
+  th.range = 0.15, digits = 3)
 }
 \arguments{
   \item{y}{dependent or left-side variable for the long-run regression.}
@@ -18,7 +18,6 @@ ciTarThd(y, x, model = c("tar", "mtar"), lag, th.range = 0.15,
   \item{lag}{number of lags.} 
   \item{th.range}{the percentage of observations to be excluded from the search.}
   \item{digits}{number of digits used in rounding outputs.}
-  \item{\dots}{additional arguments to be passed.}
 }
 \details{
 The best threshold is determined by fitting the regression for possible threshold values, sorting the results by sum of squared errors (SSE), and selecting the best with the lowest SSE. To have sufficient observations on either side of the threshold value, certain percentage of observations on the top and bottoms are excluded from the search path. This is usually set as 0.15 by the \code{th.range} (Chan 1993).
