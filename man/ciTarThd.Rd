@@ -1,5 +1,6 @@
 \name{ciTarThd}
 \alias{ciTarThd}
+\alias{print.ciTarThd}
 \alias{plot.ciTarThd}
 \title{
 Threshold Selection for Threshold Cointegration Regression
@@ -36,8 +37,10 @@ Return a list object of class "ciTarThd" with the following components:
 }
 
 \section{Methods}{
-  One method is defined as follows:
+  Two methods are defined as follows:
   \describe{
+      \item{\code{print}:}{ This shows the \code{basic} component in the returned list object.}
+
     \item{\code{plot}:}{ plotting three graphs in one window; they reveals the relationship between SSE (sum of squared errors), AIC, BIC and the threshold values. The best threshold value is associated with the lowest SSE value.}
   }
 } 
@@ -47,7 +50,8 @@ Chan, K.S. 1993. Consistency and limiting distribution of the least squares esti
 
 Enders, W., and C.W.J. Granger. 1998. Unit-root tests and asymmetric adjustment with an example using the term structure of interest rates. Journal of Business & Economic Statistics 16(3):304-311.
 }
-\author{Changyou Sun (\email{csun@cfr.msstate.edu})}
+
+\author{Changyou Sun (\email{cs258@msstate.edu})}
 \seealso{
 \code{\link{ciTarFit}}; and \code{\link{ciTarLag}} 
 }

@@ -44,7 +44,7 @@ Return a list object of class "ecm" and "ecmAsyFit" with the following component
 \references{
 Enders, W., and C.W.J. Granger. 1998. Unit-root tests and asymmetric adjustment with an example using the term structure of interest rates. Journal of Business & Economic Statistics 16(3):304-311.
 }
-\author{Changyou Sun (\email{csun@cfr.msstate.edu})}
+\author{Changyou Sun (\email{cs258@msstate.edu})}
 
 \seealso{\code{\link{print.ecm}}; \code{\link{summary.ecm}}; \code{\link{ecmDiag}}; and \code{\link{ecmAsyTest}}.}
 \examples{

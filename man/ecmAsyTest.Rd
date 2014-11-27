@@ -1,5 +1,6 @@
 \name{ecmAsyTest}
 \alias{ecmAsyTest}
+\alias{print.ecmAsyTest}
 \title{Hypothesis Tests on Asymmetric Error Correction Model}
 \description{Conduct several F-tests on the coefficients from asymmetric ECM.}
 \usage{
@@ -30,8 +31,17 @@ Return a list object with the following components:
     \item{H4yy}{H04 in equation y: cumulative asymmetry of y for all lags}
     \item{out}{summary of the four types of hypothesis tests}
 }
+
+\section{Methods}{
+  One method is are defined as follows:
+  \describe{
+      \item{\code{print}:}{ This shows the \code{out} component in the returned list object.}
+  }
+} 
+
 \references{Frey, G., and M. Manera. 2007. Econometric models of asymmetric price transmission. Journal of Economic Surveys 21(2):349-415.}
-\author{Changyou Sun (\email{csun@cfr.msstate.edu})}
+
+\author{Changyou Sun (\email{cs258@msstate.edu})}
 
 \seealso{\code{\link{ecmAsyFit}} and \code{\link{ecmDiag}}.}
 

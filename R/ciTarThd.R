@@ -38,7 +38,9 @@ ciTarThd <- function(y, x, model = c('tar', 'mtar'), lag = 1,
       ssef = sse.lowest, obs.tot, obs.CI, basic, path)
   class(result) <- "ciTarThd"
   return(result)
-} 
+}
+
+print.ciTarThd <- function(x, ...) {print(x$basic)}
 
 plot.ciTarThd <- function(x, ...)
 {

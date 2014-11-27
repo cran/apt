@@ -83,7 +83,7 @@ Enders, W., and P.L. Siklos. 2001. Cointegration and threshold
   adjustment. Journal of Business and Economic Statistics 19(2):166-176.
 }
 
-\author{Changyou Sun (\email{csun@cfr.msstate.edu})}
+\author{Changyou Sun (\email{cs258@msstate.edu})}
 
 \seealso{
   \code{\link{summary.ciTarFit}};

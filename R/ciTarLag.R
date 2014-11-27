@@ -41,6 +41,8 @@ ciTarLag <- function(y, x, model = c("tar", "mtar"), maxlag = 4,
   return(result)
 }
 
+print.ciTarLag <- function(x, ...) {print(x$out)}
+
 plot.ciTarLag <- function(x, ...)
 {
   xlabel <- paste("Lag value (model = ", x$out[1, 2], 

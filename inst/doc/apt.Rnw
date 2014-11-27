@@ -1,4 +1,4 @@
-% APT vignette 11/4/2010, Thursday
+% APT vignette 2014
 
 % \VignetteIndexEntry{apt manual}
 % \VignetteDepends{car}
@@ -15,10 +15,7 @@
 \usepackage[english]{babel}
 \usepackage{babelbib}
 
-
-%%\usepackage{Sweave}
-
-
+%%\usepackage{Sweave} 
 
 %% header information
 \usepackage{booktabs}
@@ -52,25 +49,10 @@
                                               fontsize=\relsize{-1}}
 \DefineVerbatimEnvironment{Scode}{Verbatim}{}  
 \newenvironment{Schunk}{}{}
-%% end of header info
- 
-\SweaveOpts{engine=R, eps=FALSE, keep.source = TRUE}
-<<setup, echo = FALSE, results = hide>>=
-options(prompt = "R> ")
-options(SweaveHooks = list(
-  cex = function() par(cex.lab = 1.3, cex.axis = 1.3)))
-@
+%% end of header info 
 
 
-
-
-
-
-
-
-
-
-
+% =======================================================================
 \begin{document}
 
 
@@ -91,60 +73,8 @@ A number of econometric models have been employed to analyze APT in the past. Th
 
 The third type of APT studies utilizes the regime switching model. It improves the specification further by adding a threshold autoregression mechanism to a standard error correction model. This assumes that the price relationship as a whole depends on a state variable, which can be one of the explanatory variables. Generally, the level of the state variable, relative to a threshold value, describes different states of the world, or regimes, hence the name of regime switching models. This type of model is especially helpful in considering transaction costs between spatial markets. The final type of APT studies exploits the error correction model with threshold cointegration. The rationale is that if the true long-term relationship between two prices is asymmetric, a test for cointegration based on a symmetric long-term equilibrium may result in misleading findings. A solution to this problem is proposed by Enders and Granger (1998), who introduce Threshold Autoregressive (TAR) and Momentum Threshold Autoregressive (MTAR) cointegration. Correspondingly, the error correction terms are revised based on threshold cointegration.
 
-APT studies use time series econometrics. It has typical steps from unit root test, cointegration test, and finally error correction models. The four types of APT models differ from each other at some steps but not all. To be efficient, it is easier to structure the package along the major steps, as detail in Table 1. Several functions have not been fully developed yet. I expect it will take some time to finish the whole plan.
+APT studies use time series econometrics. It has typical steps from unit root test, cointegration test, and finally error correction models. The summary by \citealt{fre2007JES} and \citealt{mey2004JAE} is a great help for us to understand the landscape.
 
-
-\begin{table}[htbp]
-  \centering
-  \caption{Structure of package \textbf{bf}}
-    \begin{tabular}{llll}
-    \addlinespace
-    \toprule
-    Category & Function & Methods for class & Status \\
-    \midrule
-    Dataset & daCh  &       & Done \\
-          & daVi  &       & Done \\
-          & daVich &       & Done \\
-          & dcvAdf &       & No \\
-          & dcvEG &       & No \\
-          & dcvTar &       & No \\
-          &       &       &  \\
-    Basic manipulation & bsLag &       & Done \\
-          & bsStat &       & Done \\
-          & bsCaus &       & None \\
-          & bsKF  &       & None \\
-          &       &       &  \\
-    Unit root & urAdf &       & No \\
-          & urPP  &       & No \\
-          & urKpss &       & No \\
-          &       &       &  \\
-    Cointegration & ciLinEg &       & No \\
-          & ciLinJJ &       & No \\
-          & ciTarFit & print, summary & Done \\
-          & ciTarLag & plot  & Done \\
-          & ciTarThd & plot  & Done \\
-          &       &       &  \\
-    Error correction model & ecmAsyFit & print, summary & Done \\
-          & ecmAsyTest &       & Done \\
-          & ecmDiag &       & Done \\
-          & ecmSymFit & print, summary & Done \\
-          & ecmRswFit &       & No \\
-          & ecmRswThd &       & No \\
-    \bottomrule
-    \end{tabular}
-  \label{tab:addlabel}
-\end{table}
-
-
-%__________________________________________________________________________
-\section{Four types of APT models} 
-
-This section will explain the four types of APT models. The summary by \citealt{fre2007JES} and \citealt{mey2004JAE} is a great help for us to understand the landscape.
-
-%__________________________________________________________________________
-\section{Functions, classes, and methods}  
-
-The core functions are explained in this section.
 
 
 %__________________________________________________________________________
@@ -176,13 +106,10 @@ plot(adf.xa)
 
 Step 3 is to examine the linear and nonlinear cointegration relationship. 
 
-
-Step 4 is to estimate an ECM model.
-
+Step 4 is to estimate an ECM model. See the package for sample codes.
 
 
-
-\clearpage
+%\clearpage
 \bibliographystyle{plainnat}
 \bibliography{apten}
 

@@ -13,7 +13,8 @@ This wraps up the outputs from threshold cointegration regression in two data fr
 }
 \value{A list with two data frames. \code{dia} contains the main model specifications and hypothesis test results. \code{out} contains the regression results for both the long run (LR) and threshold cointegration (CI).
 }
-\author{Changyou Sun (\email{csun@cfr.msstate.edu})}
+\author{Changyou Sun (\email{cs258@msstate.edu})}
+
 \seealso{\code{\link{ciTarFit}}.}
 \examples{
 # see example at daVich

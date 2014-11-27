@@ -28,7 +28,7 @@ No value returnd from this function call. A GUI is generated as the side effect.
 Lawrence, M.F., and J. Verzani. 2012. Programming graphical user interfaces in R. Ed. CRC Press. 466 P.
 }
 
-\author{Changyou Sun (\email{csun@cfr.msstate.edu})}
+\author{Changyou Sun (\email{cs258@msstate.edu})}
 
 \seealso{\code{\link{guiCor}}}
 

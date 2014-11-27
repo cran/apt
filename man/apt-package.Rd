@@ -16,8 +16,8 @@ As a teaching demo, a graphical user interface is also developed for the main fu
 \tabular{ll}{
 Package: \tab apt\cr
 Type: \tab Package\cr
-Version: \tab 2.2\cr
-Date: \tab 2010-11-03 (first built); 2014-8-10 (last) \cr
+Version: \tab 2.3\cr
+Date: \tab 2010-11-03 (first built); 2014-11-28 (last) \cr
 Depends: \tab R (>= 3.0.0), erer, gWidgets \cr
 Imports: \tab car, urca, copula \cr
 Suggests: \tab RGtk2, gWidgetsRGtk2, cairoDevice \cr
@@ -26,5 +26,5 @@ LazyLoad: \tab yes\cr
 }
 }
 
-\author{Changyou Sun <csun@cfr.msstate.edu>}
+\author{Changyou Sun (\email{cs258@msstate.edu})}
 \keyword{package} 

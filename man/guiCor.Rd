@@ -32,7 +32,7 @@ Lawrence, M.F., and J. Verzani. 2012. Programming graphical user interfaces in R
 Nelsen, R.B. 2006. An Introduction to Copulas. 2nd Ed. Springer. 269 P.
 }
 
-\author{Changyou Sun (\email{csun@cfr.msstate.edu})}
+\author{Changyou Sun (\email{cs258@msstate.edu})}
 
 \seealso{\code{\link{guiApt}}}
 

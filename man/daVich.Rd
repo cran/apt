@@ -68,6 +68,8 @@ for (i in 1:12) {
  }
 th.mtar
 
+# The following threshold values are specific to this data. They HAVE TO be  
+# revised for another data set. Otherwise, various errors will occur.
   t.tar <- -8.041; t.mtar <- -0.451     # lag = 0 to 4
 # t.tar <- -8.701 ; t.mtar <- -0.451    # lag = 5 to 12
 

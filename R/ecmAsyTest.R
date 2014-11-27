@@ -94,5 +94,8 @@ ecmAsyTest <- function(w, digits = 3)
     paste(w$name.x, ".P.Value",sep=""), paste(w$name.y, ".P.Value",sep=""),
     paste(w$name.x, ".Sig",    sep=""), paste(w$name.y, ".Sig",    sep=""))          
   result$out <- hyp
+  class(result) <- "ecmAsyTest"
   return(result)
 }
+
+print.ecmAsyTest <- function(x, ...) {print(x$out)}
