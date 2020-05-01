@@ -7,20 +7,17 @@
 \description{
 Asymmetric price transmission between two time series is assessed. The names of functions and datasets reveal the categories they belong to. A prefix of \code{da} is for datasets, \code{ci} for cointegration, and \code{ecm} for error correction model.
 
-The focus is on the price transmission between \emph{two} price variables. Therefore, objectives like fitting an error correction model for more than two variables are beyond the scope of this package. 
-
-As a teaching demo, a graphical user interface is also developed for the main functions in this package. Several packages are needed to run the two included GUIs: \code{guiCor} and \code{guiApt}. See the note at \code{guiCor} for installation detail.
+The focus is on the price transmission between \emph{two} price variables. Therefore, objectives like fitting an error correction model for more than two variables are beyond the scope of this package.
 }
 
 \details{
 \tabular{ll}{
 Package: \tab apt\cr
 Type: \tab Package\cr
-Version: \tab 2.5\cr
-Date: \tab 2016-2-25\cr
-Depends: \tab R (>= 3.0.0), erer, gWidgets \cr
-Imports: \tab car, urca, copula \cr
-Suggests: \tab RGtk2, gWidgetsRGtk2, cairoDevice \cr
+Version: \tab 3.0\cr
+Date: \tab 2020-04-30\cr
+Depends: \tab R (>= 3.0.0), erer \cr
+Imports: \tab car, urca \cr
 License: \tab GPL \cr
 LazyLoad: \tab yes\cr
 }

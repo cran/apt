@@ -1,5 +1,5 @@
 # Import all packages listed as Imports or Depends
-import(erer, car, urca, copula, gWidgets)
+import(erer, car, urca)
 
 importFrom("graphics", "abline", "grid", "legend", "lines", "par", "text")
 
@@ -10,7 +10,7 @@ importFrom("stats", "AIC", "anova", "as.formula", "cor",
              "formula", "is.ts", "lm", "model.matrix", "na.omit",
              "plogis", "pnorm", "pt", "residuals", "sd", "start", "time",
              "ts", "ts.union", "tsp", "vcov", "window", 
-             "Box.test", "deviance", "plot.ts", "resid", "ts.plot")
+             "Box.test", "deviance", "plot.ts", "resid", "ts.plot", "coef")
 
 importFrom("utils", "available.packages", "capture.output",
              "download.file", "download.packages", "head", "object.size",
