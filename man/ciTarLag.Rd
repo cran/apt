@@ -44,7 +44,7 @@ Enders, W. 2004. Applied Econometric Time Series. John Wiley & Sons, Inc., New Y
 
 Enders, W., and C.W.J. Granger. 1998. Unit-root tests and asymmetric adjustment with an example using the term structure of interest rates. Journal of Business & Economic Statistics 16(3):304-311.
 }
-\author{Changyou Sun (\email{cs258@msstate.edu})}
+\author{Changyou Sun (\email{edwinsun258@gmail.com})}
 \seealso{
 \code{\link{ciTarFit}}; and \code{\link{ciTarThd}}; 
 }

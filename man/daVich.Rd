@@ -47,7 +47,7 @@ summary(eg <- ur.df(ry,  type=c("none"), lags=1)); plot(eg)
 (eg12 <- Box.test(eg@res, lag = 12, type="Ljung"))
 
 
-\dontrun{
+\donttest{
 
 # 3. TAR + Cointegration  ______________________________________________________
 
@@ -143,7 +143,7 @@ colnames(tes3) <- colnames(coe)
 (ed2  <- data.frame(apply(ed2, 2, as.character), stringsAsFactors=FALSE))
 (tes3 <- data.frame(apply(tes3,2, as.character), stringsAsFactors=FALSE))
 table.4 <- data.frame(rbind(coe, ed2, tes3))
-options(width=150); table.4; options(width=80)
+table.4
 
 } 
 }

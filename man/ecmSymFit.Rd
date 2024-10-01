@@ -28,7 +28,7 @@ Return a list object of class "ecm" and "ecmSymFit" with the following component
 \references{
 Enders, W. 2004. Applied Econometric Time Series. John Wiley & Sons, Inc., New York. 480 P.
 }
-\author{Changyou Sun (\email{cs258@msstate.edu})}
+\author{Changyou Sun (\email{edwinsun258@gmail.com})}
 \seealso{
 \code{\link{print.ecm}}; \code{\link{summary.ecm}}; \code{\link{ecmDiag}}; and \code{\link{ecmAsyFit}}.
 }

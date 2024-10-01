@@ -22,7 +22,7 @@ Return a data frame object with the following components by equation: R-squared,
 }
 \references{Enders, W. 2004. Applied Econometric Time Series. John Wiley & Sons, Inc., New York. 480 P.}
 
-\author{Changyou Sun (\email{cs258@msstate.edu})}
+\author{Changyou Sun (\email{edwinsun258@gmail.com})}
 
 \seealso{\code{\link{ecmAsyFit}}; \code{\link{ecmSymFit}}; and \code{\link{ecmDiag}}.}
 

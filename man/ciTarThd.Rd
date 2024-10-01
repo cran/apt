@@ -51,7 +51,7 @@ Chan, K.S. 1993. Consistency and limiting distribution of the least squares esti
 Enders, W., and C.W.J. Granger. 1998. Unit-root tests and asymmetric adjustment with an example using the term structure of interest rates. Journal of Business & Economic Statistics 16(3):304-311.
 }
 
-\author{Changyou Sun (\email{cs258@msstate.edu})}
+\author{Changyou Sun (\email{edwinsun258@gmail.com})}
 \seealso{
 \code{\link{ciTarFit}}; and \code{\link{ciTarLag}} 
 }

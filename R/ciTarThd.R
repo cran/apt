@@ -44,6 +44,7 @@ print.ciTarThd <- function(x, ...) {print(x$basic)}
 
 plot.ciTarThd <- function(x, ...)
 {
+  oldpar <- par(no.readonly = TRUE); on.exit(par(oldpar))
   par(mfrow = c(2, 2))
   plot(path.sse ~ path.thr, data = x$path, type = "l", col = "blue", 
      ylab = "SSE", xlab = paste("threshold value for", x$model))

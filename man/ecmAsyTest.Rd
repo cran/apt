@@ -41,7 +41,7 @@ Return a list object with the following components:
 
 \references{Frey, G., and M. Manera. 2007. Econometric models of asymmetric price transmission. Journal of Economic Surveys 21(2):349-415.}
 
-\author{Changyou Sun (\email{cs258@msstate.edu})}
+\author{Changyou Sun (\email{edwinsun258@gmail.com})}
 
 \seealso{\code{\link{ecmAsyFit}} and \code{\link{ecmDiag}}.}
 
